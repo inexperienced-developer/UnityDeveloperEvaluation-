@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 		for (int i = 0; i < _numArrows; ++i)
 		{
 			Vector3 randPos =
-				Camera.main.ScreenToWorldPoint(new Vector3(Screen.width * Random.Range(0f, 1f), Screen.height* Random.Range(0f, 1f),
+				Camera.main.ScreenToWorldPoint(new Vector3(Screen.width * Random.Range(0f, 1f), Screen.height * Random.Range(0f, 1f),
 					(-Camera.main.transform.position.z + _arrowDepth) * 1.5f));
 			randPos.z = _arrowDepth + Random.Range(0f, 1f) * _arrowDepth;
 			_arrows[i] = Instantiate(_arrowPrefab, randPos, Quaternion.identity);
